@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../CartWidget/CartWidget';
+import FlagIcon from '@mui/icons-material/Flag';
 
 const pages = ['Products', 'About us', 'Contact us'];
 const settings = ['Profile', 'Logout'];
@@ -40,7 +41,7 @@ const Navbar = () => {
     <AppBar position="static" style={{background: '#000000'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <FlagIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
