@@ -5,7 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions} from '@mui/material';
 import { ItemCount } from '../ItemCount/ItemCount';
-import './Item.css';
 
 
 
