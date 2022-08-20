@@ -12,7 +12,7 @@ export default function Item({ img, country, type, price, continent, stock, desc
         console.log('Item added to cart')
     }
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ border:'none', boxShadow:'none', maxWidth: 345, transition: "transform 0.15s ease-in-out", "&:hover": { transform: "scale3d(1.05, 1.05, 1)"}  }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -32,17 +32,19 @@ export default function Item({ img, country, type, price, continent, stock, desc
             </Typography>
             <Typography variant="body2" color="text.secondary" margin='5px' style={{textAlign: 'justify'}}> 
                 {description}
-            </Typography>
+            </Typography> */}
             <Typography variant="body2" color="text.secondary" margin='5px'>
                 Stock: {stock}
-            </Typography>   */}
+            </Typography>   
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemCount stock={stock} initial={1} onAdd={onAdd} />
-        <Button size="small" color="primary">
+        <Button size="large" color="primary" sx={{ border: 1, width: '100%'}}>
           Show more details
         </Button>
+      </CardActions>
+      <CardActions>
+        <ItemCount stock={stock} initial={1} onAdd={onAdd} />
       </CardActions>
     </Card>
   );
