@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions} from '@mui/material';
-import { Counter } from '../Counter/Counter';
+import { ItemCount } from '../ItemCount/ItemCount';
 import './Item.css';
 
 export default function Item({ img, country, type, price, continent, stock, description }) {
@@ -39,7 +39,7 @@ export default function Item({ img, country, type, price, continent, stock, desc
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Counter stock={stock} initial={1} onAdd={onAdd} />
+        <ItemCount stock={stock} initial={1} onAdd={onAdd} />
         <Button size="small" color="primary">
           Share
         </Button>
