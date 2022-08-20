@@ -7,6 +7,8 @@ import { Button, CardActionArea, CardActions} from '@mui/material';
 import { ItemCount } from '../ItemCount/ItemCount';
 import './Item.css';
 
+
+
 export default function Item({ img, country, type, price, continent, stock, description }) {
     const onAdd = () => {
         console.log('Item added to cart')
@@ -39,7 +41,7 @@ export default function Item({ img, country, type, price, continent, stock, desc
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="large" color="primary" sx={{ border: 1, width: '100%'}}>
+        <Button variant="contained" size="large" color="primary" sx={{ backgroundColor: "#000000", width: '100%'}}>
           Show more details
         </Button>
       </CardActions>
