@@ -22,19 +22,19 @@ export default function Item({ img, country, type, price, continent, stock, desc
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-                {type} de {country}
+                {type} of {country}
             </Typography>
             <Typography variant="h6" color="text.secondary" margin='5px' style={{fontWeight: 'bold', textAlign: 'center'}}>
                 ${price}
             </Typography>
             <Typography variant="body2" color="text.secondary" margin='5px'>
-                Continente: {continent}
+                Continent: {continent}
             </Typography>
             <Typography variant="body2" color="text.secondary" margin='5px' style={{textAlign: 'justify'}}> 
                 {description}
             </Typography>
             <Typography variant="body2" color="text.secondary" margin='5px'>
-                Disponibles: {stock}
+                Stock: {stock}
             </Typography>  
         </CardContent>
       </CardActionArea>
