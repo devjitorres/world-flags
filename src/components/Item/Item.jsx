@@ -27,7 +27,7 @@ export default function Item({ img, country, type, price, continent, stock, desc
             <Typography variant="h6" color="text.secondary" margin='5px' style={{fontWeight: 'bold', textAlign: 'center'}}>
                 ${price}
             </Typography>
-            <Typography variant="body2" color="text.secondary" margin='5px'>
+            {/* <Typography variant="body2" color="text.secondary" margin='5px'>
                 Continent: {continent}
             </Typography>
             <Typography variant="body2" color="text.secondary" margin='5px' style={{textAlign: 'justify'}}> 
@@ -35,13 +35,13 @@ export default function Item({ img, country, type, price, continent, stock, desc
             </Typography>
             <Typography variant="body2" color="text.secondary" margin='5px'>
                 Stock: {stock}
-            </Typography>  
+            </Typography>   */}
         </CardContent>
       </CardActionArea>
       <CardActions>
         <ItemCount stock={stock} initial={1} onAdd={onAdd} />
         <Button size="small" color="primary">
-          Share
+          Show more details
         </Button>
       </CardActions>
     </Card>

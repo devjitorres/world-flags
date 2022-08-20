@@ -9,11 +9,11 @@ const ItemList = ({ products }) => {
                 sx={{
                     display: 'flex',
                     flexDirection: 'row',
-                    p: 1,
+                    p: 5,
                     m: 1,
                     bgcolor: 'background.paper',
                     borderRadius: 1,
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-evenly'
                 }}
         >
             {products.map(prod => <Item key={prod.id} {...prod} />)}
