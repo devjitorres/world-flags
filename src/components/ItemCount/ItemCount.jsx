@@ -9,24 +9,34 @@ const [counter, setCounter] = useState(initial);
 
     return(
         <>
-        <Fab color="primary" aria-label="remove" size="small"
-            onClick={() => {setCounter(counter-1)}} disabled={counter === initial}
-            sx={{ backgroundColor: "white", color: "black"}}
-        >
+            <Fab color="primary" aria-label="remove" size="small"
+                onClick={() => {setCounter(counter-1)}} disabled={counter === initial}
+                sx={{ backgroundColor: "white", color: "black"}}
+            >
             <RemoveIcon />
-        </Fab>
-        <div>
-            <span>{counter}</span>
-        </div>
-        <Fab color="primary" aria-label="add" size="small"
-            onClick={() => {setCounter(counter+1)}} disabled={counter === stock}
-            sx={{ backgroundColor:"black" }}
-        >
+            </Fab>
+            <div>
+                <span style={{paddingLeft:"5px", fontSize:"large"}}>{counter}</span>
+            </div>
+            <Fab color="primary" aria-label="add" size="small"
+                onClick={() => {setCounter(counter+1)}} disabled={counter === stock | stock === 0}
+                sx={{ backgroundColor:"black" }}
+            >
             <AddIcon />
-        </Fab>
-            <Button onClick={() => onAdd(counter)} variant="contained" startIcon={<AddShoppingCartIcon sx={{ color: 'black'}}/>} sx={{ backgroundColor:"white", color: "black", width: "70%"}}>
-                Add to cart
-            </Button>
+            </Fab>
+                    {
+                    stock === 0
+                    ?  <Button size="small"
+                            disabled= "true" variant="contained"  sx={{ justifyContent: "center", backgroundColor:"white", color: "black", width: "70%"}}>
+                            <p>Not available</p>
+                        </Button>
+                    :   <Button size="small" onClick={() => onAdd(counter)}
+                            variant="contained"  sx={{ justifyContent: "center", backgroundColor:"white", color: "black", width: "70%"}}>
+                            <AddShoppingCartIcon sx={{ position: "absolute", right:"73%", color: 'black'}}/> 
+                            <p style={{ paddingLeft: "25px" }}>Add to cart</p>
+                        </Button>
+                    }   
+
         </>
     );
 };
